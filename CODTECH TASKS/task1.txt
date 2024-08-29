@@ -1,0 +1,37 @@
+create table transactions (book_id int, mem_id int, borrow_date date, return_date date,
+
+FOREIGN KEY (book_id) REFERENCES books (book_id),
+
+FOREIGN KEY (mem_id) REFERENCES members(mem_id));
+
+desc books;
+
+desc members;
+
+desc transactions;
+
+A insert into books values (1, 'book thief', 'markus zusak',450);
+
+insert into books values (2, 'the midnight library', 'matt haig',250); insert into books values (3, 'the silent patient', 'alex michaelides',300);
+
+insert into books values (4, '13 reasons why', 'jay asher', 270);
+
+insert into books values (5, 'one arranged murder', 'chetan bhagat', 300);
+
+select * from books;
+
+UPDATE books SET book_name = 'one night at the call centre', price = 200
+
+WHERE book_id=5;
+
+select * from books;
+
+DELETE FROM books WHERE book_id=5;
+
+select *from books;
+
+drop table transactions;
+
+drop table books;
+
+drop table members;
